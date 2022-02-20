@@ -1,0 +1,57 @@
+* {
+  font-family: Verdana;
+}
+body {
+  background-color:honeydew;
+
+}
+h1 {
+  font-family: Verdana;
+  text-align: center;
+}
+
+h2 {
+  font-family: Verdana;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.container{
+  display: flex;
+}
+
+.container-child {
+  flex: 3;
+  padding: 5px
+}  
+
+.container-child-slider {
+  flex: 1;
+  align-self: flex-end;
+  padding-bottom: 25%;
+  text-align: center;
+} 
+
+.tooltipBox {
+  opacity: 90%;
+  background-color: lightgray;
+}
+
+.tooltip-title{
+  font-weight: bold;
+}
+
+.chart-title{
+  font-weight: bold;
+}
+
+.chart-axis{
+  font-size: 80%;
+  
+}
+
+.info{
+  font-size: 70%;
+  color: gray;
+}
+

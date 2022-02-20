@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project 1 App</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>    
+    <!-- Add HTML content, SVG drawing area, ... -->
+    <h1>Project 1</h1>
+    <h2>Kevin Eaton</h2>
+    <p class="info">Data from:</p>
+    <p class="info">US Environmental Protection Agency. 
+        Air Quality System Data Mart [internet database] available via https://www.epa.gov/outdoor-air-quality-data. 
+        Accessed February 18, 2022.</p>
+    <p class="info">Libraries Used: d3 (https://github.com/d3/d3) </p>
+    <!-- D3 bundle -->
+    <script src="js/d3.v6.min.js"></script>
+
+    <!-- Charts for Part C -->
+    <div class="container">
+        <div class="container-child">
+            <label for="county-select1">Choose first county:</label>
+            <select id="county1" name="county-select1" onchange="updateCounty1(this.value)">
+                <option value="California,San Francisco">San Francisco, California</option>
+                <option value="Ohio,Hamilton">Hamilton, Ohio</option>
+                <option value="South Carolina,Greenville">Greenville, South Carolina</option>
+                <option value="Tennessee,Knox">Knox, Tennessee</option>
+                <option value="Utah,Salt Lake">Salt Lake, Utah</option>
+                <option value="Texas,Dallas">Dallas, Texas</option>
+                <option value="New York,New York">New York, New York</option>
+                <option value="Illinois,Cook">Cook, Illinois</option>
+                <option value="Massachusetts,Middlesex">Middlesex, Massachusetts</option>
+                <option value="Missouri,Saint Louis">Saint Louis, Missouri</option>
+                <option value="Nevada,Clark">Clark, Nevada</option>
+                <option value="Colorado,Denver">Denver, Colorado</option>
+            </select>
+            <svg id="linechart1a"></svg>
+            <svg id="linechart2a"></svg>
+            <svg id="barcharta"></svg>
+            <svg id="pieAQIa"></svg>
+            <svg id="piePola"></svg>
+
+        </div>
+        <div class="container-child-slider">
+            <p>Choose Year:</p>
+            <input type="range" min="1980" max="2021" value="2021" class="slider" id="yearSlider" oninput="{this.nextElementSibling.value = this.value; updateYear(this.value);}">
+            <output>2021</output>
+            
+        </div>
+        <div class="container-child">
+            <label for="county-select2">Choose second county:</label>
+            <select id="county2" name="county-select2" onchange="updateCounty2(this.value)">
+                <option value="California,San Francisco">San Francisco, California</option>
+                <option value="Ohio,Hamilton">Hamilton, Ohio</option>
+                <option value="South Carolina,Greenville">Greenville, South Carolina</option>
+                <option value="Tennessee,Knox">Knox, Tennessee</option>
+                <option value="Utah,Salt Lake">Salt Lake, Utah</option>
+                <option value="Texas,Dallas">Dallas, Texas</option>
+                <option value="New York,New York">New York, New York</option>
+                <option value="Illinois,Cook">Cook, Illinois</option>
+                <option value="Massachusetts,Middlesex">Middlesex, Massachusetts</option>
+                <option value="Missouri,Saint Louis">Saint Louis, Missouri</option>
+                <option value="Nevada,Clark">Clark, Nevada</option>
+                <option value="Colorado,Denver">Denver, Colorado</option>
+            </select>
+            <svg id="linechart1b"></svg>
+            <svg id="linechart2b"></svg>
+            <svg id="barchartb"></svg>
+            <svg id="pieAQIb"></svg>
+            <svg id="piePolb"></svg>
+        </div>
+        <div id="tooltipBox" class="tooltipBox"></div>
+    </div>
+    
+        
+
+    <!-- Our JS code - INCLUDING the new files-->
+    <script src="js/main.js"></script>
+    <script src="js/linechart.js"></script>
+    <script src="js/barchart.js"></script>
+    <script src="js/piechart.js"></script>
+    
+
+</body>
+</html>
